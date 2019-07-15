@@ -1,0 +1,57 @@
+@model List<Student>
+
+<a class="btn btn-info" asp-action="New">Add New Student</a>
+<br/>
+<br/>
+
+<form asp-action="Index" asp-controller-="POST">
+    <div class="row input-group">
+        <input type="text" name="search" id="search" class="form-control"/>
+        <div class="input-group-btn">
+            <input type="submit" value="Search" class="btn btn-primary"/>
+        </div>
+    </div>
+</form>
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <td>FirstName</td>
+        <td>MiddleName</td>
+        <td>LastName</td>
+        <td>Nationality</td>
+        <td>Gender</td>
+        <td>Religion</td>
+        <td>Date Of Birth</td>
+        <td>City</td>
+        <td colspan="2">Actions</td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td><a asp-action="Details" asp-controller="Student" asp-route-id="@student.Id">@student.FirstName</a></td>
+            <td>@student.MiddleName</td>
+            <td>@student.LastName</td>
+            <td>@student.Nationality</td>
+            <td>@student.Gender</td>
+            <td>@student.Religion</td>
+            <td>@student.DateOfBirth</td>
+            <td>@student.City</td>
+            <d>
+                <td>
+                    <a class="btn btn-primary" asp-action="edit" asp-route-Id="@student.Id">Edit</a>
+                </td>
+                <td>
+                    <a
+                        class="btn btn-danger delete"
+                        asp-route-Id="@student.Id"
+                        asp-action="Delete">
+                        Delete
+                    </a>
+                </td>
+            </d>
+        </tr>
+    }
+    </tbody>
+</table>

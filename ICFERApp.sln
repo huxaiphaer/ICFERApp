@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICFERApp", "ICFERApp\ICFERApp.csproj", "{DF32D334-AC4C-4874-AC3F-9E2CDF99C0D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF32D334-AC4C-4874-AC3F-9E2CDF99C0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF32D334-AC4C-4874-AC3F-9E2CDF99C0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF32D334-AC4C-4874-AC3F-9E2CDF99C0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF32D334-AC4C-4874-AC3F-9E2CDF99C0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
