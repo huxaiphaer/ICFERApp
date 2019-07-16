@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "57337865cb0d204d74c799f97947cc5d95cb70da"
+    "signature": "d92ea4ff8fec8147df587a0f43bac65faa03e75a"
   },
   "compilationOptions": {
     "defines": [
@@ -32,6 +32,7 @@
           "Microsoft.NETCore.App": "2.2.0",
           "NToastNotify": "5.0.10",
           "Pomelo.EntityFrameworkCore.MySql": "2.2.0",
+          "ReflectionIT.Mvc.Paging": "3.5.0",
           "System.Console": "4.3.1"
         },
         "runtime": {
@@ -234,6 +235,26 @@
         },
         "compile": {
           "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
+        }
+      },
+      "ReflectionIT.Mvc.Paging/3.5.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.Views.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.0.0"
+          },
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.Views.dll": {},
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3609,6 +3630,13 @@
       "sha512": "sha512-kAH3WjIyzHvSjYEQ4h63WJLtpA9PfbgOdEIalL668KvDo3PIlT/2lSFMhXXGrYgGcD1bthszXXs7BASooRXZgA==",
       "path": "pomelo.jsonobject/2.2.0",
       "hashPath": "pomelo.jsonobject.2.2.0.nupkg.sha512"
+    },
+    "ReflectionIT.Mvc.Paging/3.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-79qDkOI13r+fb+187Y4c7WWTOBK5s0aZ7hxJRzVe3jbUFCS/vMOGBjfvTA1ZsZ1IHnyn4NthtKDvZ9yrJVx6VQ==",
+      "path": "reflectionit.mvc.paging/3.5.0",
+      "hashPath": "reflectionit.mvc.paging.3.5.0.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

@@ -6,6 +6,8 @@ namespace ICFERApp.Models
 {
     public class Parents
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public long Id { get; set; }
         [Display(Name="Religion Of Deceased Father")]
         public string ReligionOfDeceasedFather { get; set; }

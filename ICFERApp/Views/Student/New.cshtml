@@ -1,11 +1,18 @@
 @model Student
 
-<form asp-action="New" method="Post" asp-controller="Student">
+<form asp-action="New" method="Post" asp-controller="Student" enctype="multipart/form-data">
     <div asp-validation-summary="All"></div>
     
     <input asp-for="Id" type="hidden"/>
     <input name="IsEditMode" id="IsEditMode" value="@ViewBag.IsEditMode" type="hidden"/>
     
+
+    <div class="form-row">
+        <label>Upload Photo</label>
+        <input asp-for="ImageUrl" type="file" id="file"  name="file" class="form-control"/>
+      
+    </div>
+
     <div class="form-row">
         <div class="col">
             <label asp-for="FirstName"></label>

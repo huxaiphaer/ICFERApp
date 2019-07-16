@@ -6,6 +6,8 @@ namespace ICFERApp.Models
 {
     public class Siblings
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public long Id { get; set; }
         [Display(Name="Number of Brothers")]
         public int NumberOfBrothers { get; set; }

@@ -1,9 +1,13 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using ICFERApp.Data;
 using ICFERApp.Models;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
 
 namespace ICFERApp.Repository
 {
@@ -17,6 +21,7 @@ namespace ICFERApp.Repository
 
         public void Create(Student student)
         {
+          
             _context.Students.Add(student);
             _context.SaveChanges();
         }
@@ -32,8 +37,8 @@ namespace ICFERApp.Repository
 
             if (existingStudent != null)
             {
-                // do some updating.
-                
+                // updating student.
+
                 _context.Entry(existingStudent).CurrentValues.SetValues(student);
                 _context.Entry(existingStudent).State = EntityState.Modified;
                        
@@ -87,9 +92,8 @@ namespace ICFERApp.Repository
             
         }
 
-        public Student GetSingleStudent(int id)
+        public Student GetSingleStudent(long id)
         {
-
             var student = _context.Students
                 .Include(e => e.Education)
                 .Include(s => s.Siblings)
@@ -99,6 +103,7 @@ namespace ICFERApp.Repository
             return student;
         }
 
+       
         public void Delete(Student student)
         {
             _context.Students.Remove(student);
@@ -108,8 +113,33 @@ namespace ICFERApp.Repository
 
         public List<Student> GetAllStudents()
         {
+           
             return _context.Students.
                 ToList();
+        }
+
+        public async Task<PagingList<Student>> GetOrderedList(int page =1)
+        {
+            var query = _context.Students.Include(p=>p.Parents)
+                .Include( s => s.Siblings)
+                .Include(g => g.Guardian)
+                .Include(e => e.Education)
+                .AsNoTracking().OrderBy(s => s.Id);
+            
+            var model = await PagingList.CreateAsync(query,3,page );
+            
+            return model;
+        }
+
+        public List<Student> SearchStudents(string search)
+        {
+            
+            return _context.Students
+                .Where(p =>
+                    p.FirstName.Contains(search)
+                    || p.MiddleName.Contains(search) ||
+                     p.StudentRegNo.Contains(search)||
+                    p.LastName.Contains(search)).ToList();
         }
     }
 }

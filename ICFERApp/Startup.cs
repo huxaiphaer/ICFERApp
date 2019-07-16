@@ -14,6 +14,7 @@ using ICFERApp.Data;
 using ICFERApp.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ReflectionIT.Mvc.Paging;
 
 namespace ICFERApp
 {
@@ -45,6 +46,7 @@ namespace ICFERApp
 
             services.AddTransient<IStudentRepository, StudentRepository>();
             services.AddMvc().AddNToastNotifyToastr();
+            services.AddPaging();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -75,7 +77,7 @@ namespace ICFERApp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Student}/{action=Index}/{id?}");
             });
         }
     }

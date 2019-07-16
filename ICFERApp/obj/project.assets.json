@@ -2851,6 +2851,21 @@
           "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
         }
       },
+      "ReflectionIT.Mvc.Paging/3.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.Views.dll": {},
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.Views.dll": {},
+          "lib/netstandard2.0/ReflectionIT.Mvc.Paging.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -7722,6 +7737,22 @@
         "lib/netstandard2.0/Pomelo.JsonObject.dll",
         "pomelo.jsonobject.2.2.0.nupkg.sha512",
         "pomelo.jsonobject.nuspec"
+      ]
+    },
+    "ReflectionIT.Mvc.Paging/3.5.0": {
+      "sha512": "79qDkOI13r+fb+187Y4c7WWTOBK5s0aZ7hxJRzVe3jbUFCS/vMOGBjfvTA1ZsZ1IHnyn4NthtKDvZ9yrJVx6VQ==",
+      "type": "package",
+      "path": "reflectionit.mvc.paging/3.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License..txt",
+        "lib/netstandard2.0/ReflectionIT.Mvc.Paging.Views.dll",
+        "lib/netstandard2.0/ReflectionIT.Mvc.Paging.Views.pdb",
+        "lib/netstandard2.0/ReflectionIT.Mvc.Paging.dll",
+        "lib/netstandard2.0/ReflectionIT.Mvc.Paging.pdb",
+        "reflectionit.mvc.paging.3.5.0.nupkg.sha512",
+        "reflectionit.mvc.paging.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -12638,6 +12669,7 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "NToastNotify >= 5.0.10",
       "Pomelo.EntityFrameworkCore.MySql >= 2.2.0",
+      "ReflectionIT.Mvc.Paging >= 3.5.0",
       "System.Console >= 4.3.1"
     ]
   },
@@ -12716,6 +12748,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "ReflectionIT.Mvc.Paging": {
+            "target": "Package",
+            "version": "[3.5.0, )"
           },
           "System.Console": {
             "target": "Package",

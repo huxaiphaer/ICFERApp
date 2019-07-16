@@ -5,6 +5,8 @@ namespace ICFERApp.Models
 {
     public class Guardian
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public long Id { get; set; }
         
         [Display(Name="Guardian First Name")]

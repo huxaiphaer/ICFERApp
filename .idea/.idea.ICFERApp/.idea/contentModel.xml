@@ -19,6 +19,7 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="BaseController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="StudentController.cs" t="Include" />
         </e>
@@ -51,6 +52,14 @@
             <e p="20190715234317_add more tables 6.Designer.cs" t="Include" />
             <e p="20190716001447_add more tables 7.cs" t="Include" />
             <e p="20190716001447_add more tables 7.Designer.cs" t="Include" />
+            <e p="20190716093220_modify tables.cs" t="Include" />
+            <e p="20190716093220_modify tables.Designer.cs" t="Include" />
+            <e p="20190716094927_modify tables 1.cs" t="Include" />
+            <e p="20190716094927_modify tables 1.Designer.cs" t="Include" />
+            <e p="20190716100103_modify tables 2.cs" t="Include" />
+            <e p="20190716100103_modify tables 2.Designer.cs" t="Include" />
+            <e p="20190716174252_modify tables 3.cs" t="Include" />
+            <e p="20190716174252_modify tables 3.Designer.cs" t="Include" />
             <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
@@ -90,6 +99,7 @@
             <e p="_CookieConsentPartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
+            <e p="_Pagination.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
           </e>
@@ -104,6 +114,11 @@
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
+          <e p="images" t="Include">
+            <e p="6704294_beautyblackmalemodelsmenmodels_jpeg3f54e1dcc0098223021c507908c2e737.jpeg" t="Include" />
+            <e p="mugisha.jpeg" t="Include" />
+            <e p="profile_pic.jpg" t="Include" />
+          </e>
           <e p="js" t="Include">
             <e p="site.js" t="Include" />
           </e>

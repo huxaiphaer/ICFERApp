@@ -1,14 +1,19 @@
 using System;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using ICFERApp.Models;
 using ICFERApp.Repository;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NToastNotify;
+using ReflectionIT.Mvc.Paging;
 
 namespace ICFERApp.Controllers
 {
-    public class StudentController : Controller
+    public class StudentController : BaseController<Student>
     {
         private readonly IStudentRepository _studentRepository;
         private readonly IToastNotification _toastNotification;
@@ -20,10 +25,15 @@ namespace ICFERApp.Controllers
         }
 
         // GET
-        public IActionResult Index()
+        public  IActionResult Index(string search = null)
         {
-
-            var students = _studentRepository.GetAllStudents();
+            if (!string.IsNullOrEmpty(search))
+            {
+                var foundStudents = _studentRepository.SearchStudents(search);
+                return View(foundStudents);
+            }
+            var students =  _studentRepository.GetAllStudents();
+                        
             return View(students);
         }
 
@@ -38,7 +48,7 @@ namespace ICFERApp.Controllers
 
 
         [HttpPost]
-        public IActionResult New(Student student, string IsEditMode)
+        public IActionResult New(Student student, string IsEditMode, IFormFile file)
         {
 
             if (!ModelState.IsValid)
@@ -54,6 +64,7 @@ namespace ICFERApp.Controllers
                 {
 
                     _studentRepository.Create(student);
+                     UploadFile(file, student.Id);
                     _toastNotification.AddSuccessToastMessage("Student has been created successfully.");
 
                 }
@@ -61,6 +72,7 @@ namespace ICFERApp.Controllers
                 else
                 {
                     _studentRepository.Edit(student);
+                     UploadFile(file, student.Id);
                     _toastNotification.AddSuccessToastMessage("Student has been edited successfully.");
 
                 }
@@ -94,6 +106,21 @@ namespace ICFERApp.Controllers
 
         }
 
+        public void UploadFile(IFormFile file, long studentId)
+        {
+            var fileName = file.FileName;
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images",fileName);
+
+            using (var fileStream = new FileStream(path, FileMode.Create))
+            {
+                file.CopyTo(fileStream);
+            }
+
+            var student = _studentRepository.GetSingleStudent(studentId);
+            student.ImageUrl = fileName;
+            _studentRepository.Edit(student);
+        }
+
         public IActionResult Delete(int id)
         {
             try
@@ -114,7 +141,7 @@ namespace ICFERApp.Controllers
 
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(long id)
         {
             var pet = _studentRepository.GetSingleStudent(id);
             return View(pet);

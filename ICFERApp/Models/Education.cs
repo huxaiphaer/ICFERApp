@@ -5,6 +5,8 @@ namespace ICFERApp.Models
 {
     public class Education
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public long Id { get; set; }
         [Display(Name="Education Level")]
         public string EducationLevel { get; set; }
