@@ -26,7 +26,9 @@ namespace ICFERApp.Data
 
             builder.Entity<Student>()
                 .HasOne(e => e.Education)
-                .WithOne(s => s.Student);
+                .WithOne(s => s.Student)
+                
+                ;
 
 
             builder.Entity<Student>()
@@ -42,20 +44,36 @@ namespace ICFERApp.Data
                 .WithOne(s => s.Student);
             
 
-            builder.Entity<Education>()
-                .HasOne(s => s.Student)
-                .WithOne(e => e.Education);
-            builder.Entity<Guardian>()
-                .HasOne(s => s.Student)
-                .WithOne(g => g.Guardian);
-            
-            builder.Entity<Parents>()
-                .HasOne(s => s.Student)
-                .WithOne(p => p.Parents);
-            
             builder.Entity<Siblings>()
-                .HasOne(s => s.Student)
-                .WithOne(p => p.Siblings);
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+
+            builder.Entity<Siblings>()
+                .HasKey(x => new { x.Id, x.StudentId});
+
+            builder.Entity<Education>()
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+            
+            builder.Entity<Education>()
+                .HasKey(x => new { x.Id, x.StudentId});
+
+
+            builder.Entity<Guardian>()
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+
+            builder.Entity<Guardian>()
+                .HasKey(x => new { x.Id, x.StudentId});
+            builder.Entity<Parents>()
+                .Property(p => p.Id)
+                .ValueGeneratedOnAdd();
+
+            builder.Entity<Parents>()
+                .HasKey(x => new { x.Id, x.StudentId});
+            
+            
+
         }
     }
 }

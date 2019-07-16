@@ -3,14 +3,16 @@ using System;
 using ICFERApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ICFERApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190715234317_add more tables 6")]
+    partial class addmoretables6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,8 +24,6 @@ namespace ICFERApp.Data.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<long>("StudentId");
-
                     b.Property<string>("AddressOfSchool");
 
                     b.Property<string>("EducationLevel");
@@ -32,9 +32,11 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("School");
 
+                    b.Property<long>("StudentId");
+
                     b.Property<string>("Telephone");
 
-                    b.HasKey("Id", "StudentId");
+                    b.HasKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();

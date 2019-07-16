@@ -36,40 +36,52 @@ namespace ICFERApp.Repository
                 
                 _context.Entry(existingStudent).CurrentValues.SetValues(student);
                 _context.Entry(existingStudent).State = EntityState.Modified;
+                       
+               // updating parents.
+               existingStudent.Parents.ReligionOfDeceasedFather = student.Parents.ReligionOfDeceasedFather;
+               existingStudent.Parents.ReligionOfDeceasedMother = student.Parents.ReligionOfDeceasedMother;
+               existingStudent.Parents.DateOfDemiseOfFather = student.Parents.DateOfDemiseOfFather;
+               existingStudent.Parents.DateOfDemiseOfMother = student.Parents.DateOfDemiseOfMother;
+               existingStudent.Parents.NamesOfMother = student.Parents.NamesOfMother;
+               existingStudent.Parents.NamesOfFather = student.Parents.NamesOfFather;
+               existingStudent.Parents.ReligionOfMother = student.Parents.ReligionOfMother;
+               existingStudent.Parents.MaritalStatusOfMother = student.Parents.MaritalStatusOfMother;
+               existingStudent.Parents.OccupationOfMother = student.Parents.OccupationOfMother;
+               existingStudent.Parents.MonthlyIncome = student.Parents.MonthlyIncome;
                
-                
-               // updating the parent.
-               //first get the particular parent by with respect to the student.
-                var parent = _context.Parents.
-                    FirstOrDefault(s => s.StudentId == existingStudent.Id);
-                
-                System.Console.WriteLine("parent ***** "+ parent.Id);
-                _context.Entry(parent).CurrentValues.SetValues(student.Parents);
-                _context.Entry(parent).State = EntityState.Modified;
-                System.Console.WriteLine("updated ***** "+ parent.NamesOfFather);
 
-                
+               // updating guardian.
+
+               existingStudent.Guardian.FirstName = student.Guardian.FirstName;
+               existingStudent.Guardian.MiddleName = student.Guardian.MiddleName;
+               existingStudent.Guardian.LastName = student.Guardian.LastName;
+               existingStudent.Guardian.Comments = student.Guardian.Comments;
+               existingStudent.Guardian.Occupation = student.Guardian.Occupation;
+               existingStudent.Guardian.RelationshipToOrphan = student.Guardian.RelationshipToOrphan;
+               existingStudent.Guardian.MonthlyIncome = student.Guardian.MonthlyIncome;
+               existingStudent.Guardian.EmployersName = student.Guardian.EmployersName;
+               existingStudent.Guardian.WorkAddress = student.Guardian.WorkAddress;
+               existingStudent.Guardian.MobileNo = student.Guardian.MobileNo;
+               existingStudent.Guardian.PhysicalLocation = student.Guardian.PhysicalLocation;
+               
+
                 //updating education.
-                var education = _context.Education.FirstOrDefault(e => e.StudentId == existingStudent.Id);
-                _context.Entry(education).CurrentValues.SetValues(student.Education);
-                _context.Entry(education).State = EntityState.Modified;
-
-                //updating guardian.
-                var guardian = _context.Guardian.FirstOrDefault(g => g.StudentId == existingStudent.Id);
-                _context.Entry(guardian).CurrentValues.SetValues(student.Guardian);
-                _context.Entry(guardian).State = EntityState.Modified;
+                
+                existingStudent.Education.School = student.Education.School;
+                existingStudent.Education.Telephone = student.Education.Telephone;
+                existingStudent.Education.HeadTeacher = student.Education.HeadTeacher;
+                existingStudent.Education.EducationLevel = student.Education.EducationLevel;
+                existingStudent.Education.AddressOfSchool = student.Education.AddressOfSchool;
                 
                 //updating sibling.
                 
-                var sibling = _context.Siblings.FirstOrDefault(s => s.StudentId == existingStudent.Id);
-                System.Console.WriteLine("**  " + existingStudent.Id + " sibling - "+ sibling.NumberOfBrothers);
-                _context.Entry(sibling).CurrentValues.SetValues(student.Siblings);
-                _context.Entry(sibling).State = EntityState.Modified;
-                System.Console.WriteLine("******** sibling - "+ sibling.NumberOfBrothers);
-                
+                existingStudent.Siblings.NumberOfBrothers = student.Siblings.NumberOfBrothers;
+                existingStudent.Siblings.NumberOfSisters = student.Siblings.NumberOfSisters;
+       
                
-                
             }
+
+            
             _context.SaveChanges();
             
             
