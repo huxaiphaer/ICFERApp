@@ -136,9 +136,10 @@ namespace ICFERApp.Repository
             
             return _context.Students
                 .Where(p =>
+                   
+                   p.StudentRegNo.Contains(search)||
                     p.FirstName.Contains(search)
                     || p.MiddleName.Contains(search) ||
-                     p.StudentRegNo.Contains(search)||
                     p.LastName.Contains(search)).ToList();
         }
     }

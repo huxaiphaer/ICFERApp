@@ -44,7 +44,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  width: 100%;
+  background:#f5f7fa;
 }
 .footer {
   position: absolute;
@@ -54,4 +54,25 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   line-height: 60px; /* Vertically center the text there */
+}
+
+
+
+
+.panel.panel-default {
+  border-top-width: 3px;
+}
+.panel {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+  border: 0;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.thumb96 {
+  width: 96px!important;
+  height: 96px!important;
+}
+.thumb48 {
+  width: 48px!important;
+  height: 48px!important;
 }
