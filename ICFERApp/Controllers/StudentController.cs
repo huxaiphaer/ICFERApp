@@ -71,9 +71,20 @@ namespace ICFERApp.Controllers
 
                 else
                 {
-                    _studentRepository.Edit(student);
-                     UploadFile(file, student.Id);
-                    _toastNotification.AddSuccessToastMessage("Student has been edited successfully.");
+
+                    if (file == null)
+                    {
+                       
+                        _studentRepository.EditWithoutFile(student);
+                        _toastNotification.AddSuccessToastMessage("Student has been edited successfully.");
+                    }
+                    else
+                    {
+                        _studentRepository.Edit(student);
+                        UploadFile(file, student.Id);
+                        _toastNotification.AddSuccessToastMessage("Student has been edited successfully.");
+                        
+                    }
 
                 }
 

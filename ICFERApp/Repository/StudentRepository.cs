@@ -39,9 +39,11 @@ namespace ICFERApp.Repository
             {
                 // updating student.
 
-                _context.Entry(existingStudent).CurrentValues.SetValues(student);
-                _context.Entry(existingStudent).State = EntityState.Modified;
-                       
+//             _context.Entry(existingStudent).Property(x => x.ImageUrl).IsModified = false; 
+               _context.Entry(existingStudent).CurrentValues.SetValues(student);
+               _context.Entry(existingStudent).State = EntityState.Modified;
+               
+                   
                // updating parents.
                existingStudent.Parents.ReligionOfDeceasedFather = student.Parents.ReligionOfDeceasedFather;
                existingStudent.Parents.ReligionOfDeceasedMother = student.Parents.ReligionOfDeceasedMother;
@@ -90,6 +92,26 @@ namespace ICFERApp.Repository
             _context.SaveChanges();
             
             
+        }
+
+        public void EditWithoutFile(Student student)
+        {
+            var existingStudent = _context.Students
+                .Include(e => e.Education)
+                .Include(s => s.Siblings)
+                .Include(p => p.Parents)
+                .Include(g => g.Guardian)
+                .FirstOrDefault(s => s.Id == student.Id);
+
+            if (existingStudent != null)
+            {
+                // updating student with previousImageUrl
+                student.ImageUrl = existingStudent.ImageUrl;
+                _context.Entry(existingStudent).CurrentValues.SetValues(student);
+                _context.Entry(existingStudent).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+           
         }
 
         public Student GetSingleStudent(long id)

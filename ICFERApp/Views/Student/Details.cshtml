@@ -3,66 +3,74 @@
 <h2 class="text-center" style="color: rgb(21, 121, 31)">Student Details</h2>
 <br/>
 <br/>
-<div class="container bootstrap snippet">
-<div class="row ng-scope">
-<div class="col-md-4">
-    <div class=" panel panel-default">
-        <div class="panel-body text-center">
-            <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96"  height="160" width="120" src="/images/@Model.ImageUrl" alt="Contact"></div>
-            <h5 class="m2 text-bold">@Model.FirstName  @Model.MiddleName @Model.LastName</h5>
-        </div>
-    </div>
-</div>
-<div class="col-md-8">
-    <div class="col-md-3">
-        <div class="row">
-            <div class="card">
-                <div class="card-body">
-                    <table>
-                        <tr>
-                            <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Student's Information</h5></td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Country : @Model.Nationality</td>
-                        </tr>
-                        <tr>
-                            <td>Gender : @Model.Gender</td>
-                        </tr>
-                        <tr>
-                            <td>Religion : @Model.Religion</td>
-                        </tr>
-                        <tr>
-                            <td>Home Address : @Model.HomeAddress</td>
-                        </tr>
-                        <tr>
-                            <td>Country of Residence: @Model.CountryOfResidence</td>
-                        </tr>
 
-                        <tr>
-                            <td>City : @Model.City</td>
-                        </tr>
+<style>
+    .align-cards{
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+</style>
 
-                        <tr>
-                            <td>Date of Birth : @Model.DateOfBirth</td>
-                        </tr>
+<div class="row center">
+   
+        <div class="col-md-4">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Student's Information</h5></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96"  height="160" width="120" src="/images/@Model.ImageUrl" alt="Contact"></div>
 
-                        <tr>
-                            <td>Medical Condition : @Model.MedicalCondition</td>
-                        </tr>
-
-                        <tr>
-                            <td>Deceased : @Model.Deceased</td>
-                        </tr>
-
-                    </table>  
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td> Full Names : @Model.FirstName @Model.MiddleName @Model.LastName</td>
+                            </tr>
+                            <tr>
+                                <td>Country : @Model.Nationality</td>
+                            </tr>
+                            <tr>
+                                <td>Gender : @Model.Gender</td>
+                            </tr>
+                            <tr>
+                                <td>Religion : @Model.Religion</td>
+                            </tr>
+                            <tr>
+                                <td>Home Address : @Model.HomeAddress</td>
+                            </tr>
+                            <tr>
+                                <td>Country of Residence: @Model.CountryOfResidence</td>
+                            </tr>
+    
+                            <tr>
+                                <td>City : @Model.City</td>
+                            </tr>
+    
+                            <tr>
+                                <td>Date of Birth : @Model.DateOfBirth</td>
+                            </tr>
+    
+                            <tr>
+                                <td>Medical Condition : @Model.MedicalCondition</td>
+                            </tr>
+    
+                            <tr>
+                                <td>Deceased : @Model.Deceased</td>
+                            </tr>
+    
+                        </table>  
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="row">
-            <div class="card">
+            <div class="card align-cards">
                 <div class="card-body">
                     <table>
                         <tr>
@@ -109,9 +117,9 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="row">
-            <div class="card">
+            <div class="card align-cards">
                 <div class="card-body">
                     <table>
                         <tr>
@@ -160,9 +168,10 @@
             </div>
         </div>
     </div>
-    <div class="col-md-3">
+    
+    <div class="col-md-4">
         <div class="row">
-            <div class="card">
+            <div class="card align-cards">
                 <div class="card-body">
                     <table>
                         <tr>
@@ -194,28 +203,25 @@
             </div>
         </div>
     </div>
-    @* <div class="col-md-2"> *@
-    @*     <div class="row"> *@
-    @*         <div class="card"> *@
-    @*             <div class="card-body"> *@
-    @*                 <table> *@
-    @*                     <tr> *@
-    @*                         <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Siblings Information</h5></td> *@
-    @*                     </tr> *@
-    @*                          *@
-    @*                     <tr> *@
-    @*                         <td>Number of Brothers : @Model.Siblings.NumberOfBrothers</td> *@
-    @*                     </tr> *@
-    @*                     <tr> *@
-    @*                         <td> Number of Sisters  : @Model.Siblings.NumberOfSisters</td> *@
-    @*                     </tr> *@
-    @*                      *@
-    @*                 </table>   *@
-    @*             </div> *@
-    @*         </div> *@
-    @*     </div> *@
-    @* </div> *@
-</div>
-    
-</div>
+    <div class="col-md-4"> 
+        <div class="row"> 
+            <div class="card align-cards"> 
+                <div class="card-body"> 
+                    <table> 
+                        <tr> 
+                            <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Siblings Information</h5></td> 
+                        </tr> 
+                                  
+                        <tr> 
+                            <td>Number of Brothers : @Model.Siblings.NumberOfBrothers</td> 
+                        </tr> 
+                        <tr> 
+                            <td> Number of Sisters  : @Model.Siblings.NumberOfSisters</td> 
+                        </tr> 
+                              
+                    </table>   
+                </div> 
+            </div> 
+        </div> 
+    </div> 
 </div>

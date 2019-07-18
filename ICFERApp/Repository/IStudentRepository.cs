@@ -9,6 +9,7 @@ namespace ICFERApp.Repository
     {
         void Create(Student student);
         void Edit(Student student);
+        void EditWithoutFile(Student student);
         Student GetSingleStudent(long id);
         void Delete(Student student);
         List<Student> GetAllStudents();
