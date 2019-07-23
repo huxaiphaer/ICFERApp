@@ -19,7 +19,6 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="BaseController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="StudentController.cs" t="Include" />
         </e>
@@ -99,7 +98,6 @@
             <e p="_CookieConsentPartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
-            <e p="_Pagination.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
           </e>
@@ -116,6 +114,7 @@
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">
             <e p="6704294_beautyblackmalemodelsmenmodels_jpeg3f54e1dcc0098223021c507908c2e737.jpeg" t="Include" />
+            <e p="Lutaaya Hazaifah Idris _1-X2.jpg" t="Include" />
             <e p="mugisha.jpeg" t="Include" />
             <e p="profile_pic.jpg" t="Include" />
           </e>

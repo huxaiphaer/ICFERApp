@@ -17,14 +17,24 @@
         <PackageReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.4" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
         <PackageReference Include="NToastNotify" Version="5.0.10" />
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
         <PackageReference Include="ReflectionIT.Mvc.Paging" Version="3.5.0" />
         <PackageReference Include="System.Console" Version="4.3.1" />
+        <PackageReference Include="X.PagedList.Mvc.Core" Version="7.6.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="wwwroot\images" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Views\Shared\_Pagination.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Controllers\BaseController.cs" />
     </ItemGroup>
 
 </Project>
