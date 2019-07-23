@@ -8,12 +8,14 @@ using ICFERApp.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NetBarcode;
 using NToastNotify;
 using ReflectionIT.Mvc.Paging;
+using X.PagedList;
 
 namespace ICFERApp.Controllers
 {
-    public class StudentController : BaseController<Student>
+    public class StudentController : Controller
     {
         private readonly IStudentRepository _studentRepository;
         private readonly IToastNotification _toastNotification;
@@ -25,20 +27,30 @@ namespace ICFERApp.Controllers
         }
 
         // GET
-        public  IActionResult Index(string search = null)
+        [Authorize]
+        public  IActionResult Index(string search ,int? pageNumber)
         {
+            
+            var nextPage = pageNumber ?? 1;
+            
+            
             if (!string.IsNullOrEmpty(search))
             {
                 var foundStudents = _studentRepository.SearchStudents(search);
-                return View(foundStudents);
+                var onePageOfFoundStudents = foundStudents.ToPagedList(nextPage, 3);
+                ViewBag.onePageOfStudents = onePageOfFoundStudents;
+                return View();
+                
             }
             var students =  _studentRepository.GetAllStudents();
+            var onePageOfStudents = students.ToPagedList(nextPage, 3);
+            ViewBag.onePageOfStudents = onePageOfStudents;
                         
-            return View(students);
+            return View();
         }
 
         [HttpGet]
-
+        [Authorize]
         public IActionResult New()
         {
             ViewBag.IsEditMode = "false";
@@ -48,6 +60,7 @@ namespace ICFERApp.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public IActionResult New(Student student, string IsEditMode, IFormFile file)
         {
 
@@ -98,6 +111,7 @@ namespace ICFERApp.Controllers
 
         }
 
+        [Authorize]
         public IActionResult Edit(int id)
         {
 
@@ -116,7 +130,8 @@ namespace ICFERApp.Controllers
             }
 
         }
-
+        
+        [Authorize]
         public void UploadFile(IFormFile file, long studentId)
         {
             var fileName = file.FileName;
@@ -132,6 +147,7 @@ namespace ICFERApp.Controllers
             _studentRepository.Edit(student);
         }
 
+        [Authorize]
         public IActionResult Delete(int id)
         {
             try
@@ -152,10 +168,17 @@ namespace ICFERApp.Controllers
 
         }
 
+        [Authorize]
         public IActionResult Details(long id)
         {
-            var pet = _studentRepository.GetSingleStudent(id);
-            return View(pet);
+            var singleStudent = _studentRepository.GetSingleStudent(id);
+            
+
+//            ViewBag.BarcodeImage = value;
+            return View(singleStudent);
         }
+
+
+        
     }
 }

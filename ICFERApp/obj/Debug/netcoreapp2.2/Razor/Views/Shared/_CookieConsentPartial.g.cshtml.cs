@@ -23,13 +23,18 @@ using ICFERApp.Models;
 
 #line default
 #line hidden
+#line 6 "/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/Views/_ViewImports.cshtml"
+using Syncfusion.JavaScript;
+
+#line default
+#line hidden
 #line 1 "/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/Views/Shared/_CookieConsentPartial.cshtml"
 using Microsoft.AspNetCore.Http.Features;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"829e1d9e90e74b00cc34be1e97ad24fcd54fcda7", @"/Views/Shared/_CookieConsentPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"716155923028609f598900c873d4d5de121ce0a7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"152b02cde03a3791ee7948d5f6ce31c3e8e3be39", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__CookieConsentPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-area", "", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -81,7 +86,7 @@ using Microsoft.AspNetCore.Http.Features;
             WriteLiteral("    <div id=\"cookieConsent\" class=\"alert alert-info alert-dismissible fade show\" role=\"alert\">\n        Use this space to summarize your privacy and cookie use policy. ");
             EndContext();
             BeginContext(428, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "829e1d9e90e74b00cc34be1e97ad24fcd54fcda75144", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "829e1d9e90e74b00cc34be1e97ad24fcd54fcda75289", async() => {
                 BeginContext(486, 10, true);
                 WriteLiteral("Learn More");
                 EndContext();

@@ -10,7 +10,7 @@ a.navbar-brand {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 10px;
+  font-size: 15px;
 }
 @media (min-width: 768px) {
   html {
@@ -19,10 +19,10 @@ html {
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #ffffff;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #ffffff;
 }
 
 .box-shadow {
@@ -44,7 +44,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  background:#f5f7fa;
+  background: #fafcff;
 }
 .footer {
   position: absolute;

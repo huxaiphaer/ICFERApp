@@ -1,0 +1,189 @@
+@model Student
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<style>
+    .centerTable { margin: 0px auto; }
+</style>
+
+@* Styling Student's Report. *@
+
+<h2 class="text-center" style="color: rgb(21, 121, 31)">Student Report</h2>
+<br/>
+<br/>
+<br/>
+<br/>
+
+    <table cellpadding="0" cellspacing="0" class="centerTable">
+              
+        <tr>
+            <td>
+                <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96" height="600" width="280" src="/images/@Model.ImageUrl" alt="Contact"></div>
+
+            </td>
+            <td> <h5>Registration Number :</h5>  <i> <h5 style="color: rgb(21, 121, 31)">@Model.StudentRegNo</h5> </i></td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <qrcode content="@Model.Id"  width="100" height="100"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="@ViewBag.BarcodeImage"/>
+            </td>
+        </tr>
+            <tr>
+                <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Student's Profile</h5></td>
+            </tr>
+            <tr>
+                <td> <b>Full Names :</b> @Model.FirstName @Model.MiddleName @Model.LastName</td>
+                <td> <b>Country :</b> @Model.Nationality</td>
+
+            </tr>
+
+            <tr>
+
+            </tr>
+            <tr>
+                <td>
+                    <b>Gender :</b> @Model.Gender
+                </td>
+                <td> <b>Religion :</b> @Model.Religion</td>
+            </tr>
+
+            <tr>
+                <td> <b>Home Address :</b> @Model.HomeAddress</td>
+                <td> <b>Country of Residence:</b> @Model.CountryOfResidence</td>
+            </tr>
+
+            <tr>
+                <td> <b>Country of Residence:</b> @Model.CountryOfResidence</td>
+                <td> <b>City :</b> @Model.City</td>
+            </tr>
+
+            <tr>
+                <td> <b>Date of Birth :</b> @Model.DateOfBirth</td>
+                <td> <b>Medical Condition :</b> @Model.MedicalCondition</td>
+            </tr>
+            <tr>
+                <td>
+                    <br/>
+                    <br/>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Education</h5></td>
+            </tr>
+
+            <tr>
+                <td> <b>Education Level : </b> @Model.Education.EducationLevel</td>
+                <td> <b>School :</b> @Model.Education.School</td>
+            </tr>
+
+            <tr>
+                <td> <b>Address of School :</b> @Model.Education.AddressOfSchool</td>
+                <td> <b>Home Address :</b> @Model.HomeAddress</td>
+            </tr>
+
+            <tr>
+                <td> <b>Head Teacher:</b> @Model.Education.HeadTeacher</td>
+                <td> <b>Telephone :</b> @Model.Education.Telephone</td>
+            </tr>
+            <tr>
+                <td>
+                    <br/>
+                    <br/>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center"><h5 style="color: rgba(113, 3, 138, 0.99)">Parents Details.</h5></td>
+            </tr>
+
+            <tr>
+                <td><b>Religion Of Deceased Father :</b> @Model.Parents.ReligionOfDeceasedFather</td>
+                <td> <b>Religion Of Deceased Mother :</b> @Model.Parents.ReligionOfDeceasedMother</td>
+            </tr>
+            <tr>
+                <td> <b>Date Of Demise Father :</b> @Model.Parents.DateOfDemiseOfFather</td>
+                <td> <b>Date Of Demise Mother :</b> @Model.Parents.DateOfDemiseOfMother</td>
+            </tr>
+            <tr>
+                <td> <b> Names of Mother :</b> @Model.Parents.NamesOfMother</td>
+                <td> <b>Names of Father :</b> @Model.Parents.NamesOfFather</td>
+            </tr>
+            <tr>
+                <td> <b>Religion of Mother :</b> @Model.Parents.ReligionOfMother</td>
+                <td> <b>Marital Status of Mother :</b> @Model.Parents.MaritalStatusOfMother</td>
+            </tr>
+        <tr>
+            <td> <b>Occupation of Mother :</b> @Model.Parents.OccupationOfMother</td>
+            <td> <b>Monthly Income :</b> @Model.Parents.MonthlyIncome</td>
+        </tr>
+            <tr>
+                <td>
+                    <br/>
+                    <br/>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center"><h5 style="color: rgba(113, 3, 138, 0.99)">Guardians Details.</h5></td>
+            </tr>
+            <tr>
+                <td> <b>First Name:</b> @Model.Guardian.FirstName</td>
+                <td> <b>Middle Name :</b> @Model.Guardian.MiddleName</td>
+            </tr>
+
+            <tr>
+                <td> <b>Last Name :</b> @Model.Guardian.LastName</td>
+                <td> <b>Relationship to Orphan :</b> @Model.Guardian.RelationshipToOrphan</td>
+            </tr>
+
+            <tr>
+                <td> <b>Occupation:</b> @Model.Guardian.Occupation</td>
+                <td> <b>Monthly Income :</b> @Model.Guardian.MonthlyIncome</td>
+            </tr>
+
+            <tr>
+                <td><b> Employer's Name:</b> @Model.Guardian.EmployersName</td>
+                <td><b>Worker's Address :</b> @Model.Guardian.WorkAddress</td>
+            </tr>
+
+            <tr>
+                <td> <b>Mobile Number:</b> @Model.Guardian.MobileNo</td>
+                <td> <b>Physical Location :</b> @Model.Guardian.PhysicalLocation</td>
+            </tr>
+
+        <tr>
+            <td> <b>Comments :</b> @Model.Guardian.Comments</td>
+        </tr>
+            <tr>
+                <td>
+                    <br/>
+                    <br/>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Siblings Information</h5></td>
+            </tr>
+                <tr>
+                    <td> <b>Number of Brothers :</b> @Model.Siblings.NumberOfBrothers</td>
+                    <td> <b>Number of Sisters :</b> @Model.Siblings.NumberOfSisters</td>
+             </tr>      
+    </table>

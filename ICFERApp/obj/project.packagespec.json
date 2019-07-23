@@ -49,6 +49,10 @@
           "target": "Package",
           "version": "[2.2.4, )"
         },
+        "Microsoft.Extensions.Configuration.Json": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
@@ -59,6 +63,10 @@
           "target": "Package",
           "version": "[5.0.10, )"
         },
+        "NetBarcode": {
+          "target": "Package",
+          "version": "[1.0.7, )"
+        },
         "Pomelo.EntityFrameworkCore.MySql": {
           "target": "Package",
           "version": "[2.2.0, )"
@@ -67,9 +75,45 @@
           "target": "Package",
           "version": "[3.5.0, )"
         },
+        "Syncfusion.EJ.AspNet.Core": {
+          "target": "Package",
+          "version": "[17.2.0.36, )"
+        },
+        "Syncfusion.EJ2.AspNet.Core": {
+          "target": "Package",
+          "version": "[17.1.0.50, )"
+        },
         "System.Console": {
           "target": "Package",
           "version": "[4.3.1, )"
+        },
+        "System.Drawing.Common": {
+          "target": "Package",
+          "version": "[4.6.0-preview7.19362.9, )"
+        },
+        "X.PagedList.Mvc.Core": {
+          "target": "Package",
+          "version": "[7.6.0, )"
+        },
+        "ZXing.Net": {
+          "target": "Package",
+          "version": "[0.16.4, )"
+        },
+        "jsreport.AspNetCore": {
+          "target": "Package",
+          "version": "[2.0.1, )"
+        },
+        "jsreport.Binary": {
+          "target": "Package",
+          "version": "[2.5.0, )"
+        },
+        "jsreport.Binary.OSX": {
+          "target": "Package",
+          "version": "[2.5.0, )"
+        },
+        "jsreport.Local": {
+          "target": "Package",
+          "version": "[2.1.0, )"
         }
       },
       "imports": [

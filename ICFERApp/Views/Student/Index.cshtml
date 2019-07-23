@@ -1,6 +1,13 @@
- @model List<Student> 
+ @using X.PagedList;
+ @using X.PagedList.Mvc.Core;
+ @using X.PagedList.Mvc.Common;
 
-
+ <html>
+ <head>
+    
+ </head>
+ <body>
+ 
     <a class="btn btn-info" asp-action="New">Add New Student</a>
     <br/>
     <br/>
@@ -13,7 +20,7 @@
          </div>
      </div>
  </form>
- @if (@Model.Count != 0)
+ @if (@ViewBag.onePageOfStudents.Count != 0)
  {
     <table class="table table-striped">
         <thead class="thead-dark">
@@ -25,12 +32,11 @@
             <td><b>LastName</b></td>
             <td><b>Nationality</b></td>
             <td><b>Gender</b></td>
-            <td><b>City</b></td>
             <td colspan="2"> <b>Actions</b></td>
         </tr>
         </thead>
         <tbody>
-        @foreach (var student in Model)
+        @foreach (var student in ViewBag.onePageOfStudents)
         {
             <tr>
                 <td>@student.StudentRegNo</td>
@@ -44,7 +50,6 @@
                 <td>@student.LastName</td>
                 <td>@student.Nationality</td>
                 <td>@student.Gender</td>
-                <td>@student.City</td>
                 <d>
                     <td>
                         <a class="btn btn-warning" asp-action="Details" asp-controller="Student" asp-route-Id="@student.Id">Details</a>
@@ -70,3 +75,20 @@ else
 {
     <h5 class="text-center">Sorry,there's no student available with this search,please try again.</h5>
 }
+
+ <div class="pagination">
+     <div class="col-md12">
+         
+         @Html.PagedListPager((IPagedList)ViewBag.onePageOfStudents,pageNumber=>Url.Action("Index",new { pageNumber }),
+             new X.PagedList.Mvc.Common.PagedListRenderOptionsBase
+             {
+                 LiElementClasses = new string[] { "page-item" },
+                 PageClasses = new string[] { "page-link" }
+             })
+     </div>
+
+ </div>
+ 
+ </body>
+ 
+ </html>

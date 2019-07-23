@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -12,6 +13,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ICFERApp.Data;
 using ICFERApp.Repository;
+using jsreport.AspNetCore;
+using jsreport.Binary.OSX;
+using jsreport.Local;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ReflectionIT.Mvc.Paging;
@@ -46,7 +50,16 @@ namespace ICFERApp
 
             services.AddTransient<IStudentRepository, StudentRepository>();
             services.AddMvc().AddNToastNotifyToastr();
-            services.AddPaging();
+            
+            services.AddJsReport(new LocalReporting()
+                .UseBinary(RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+                    ? JsReportBinary.GetBinary()
+                    : jsreport.Binary.OSX.JsReportBinary.GetBinary())
+                .AsUtility()
+                .Create());
+            
+         
+            
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -70,6 +83,9 @@ namespace ICFERApp
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseNToastNotify();
+            
+            
+            
 
             app.UseAuthentication();
 

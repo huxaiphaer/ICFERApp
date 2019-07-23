@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{DF32D334-AC4C-4874-AC3F-9E2CDF99C0D2}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ICFERApp/Views/Student/New.cshtml">
+    <Files>
+      <File FileName="ICFERApp/Views/Student/New.cshtml" Line="286" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ICFERApp" expanded="True">
+            <Node name="ICFERApp" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="Student" expanded="True">
+                  <Node name="New.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.ICFERApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

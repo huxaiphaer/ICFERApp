@@ -23,8 +23,13 @@ using ICFERApp.Models;
 
 #line default
 #line hidden
+#line 6 "/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/Views/_ViewImports.cshtml"
+using Syncfusion.JavaScript;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f400a24e4f1c1f8dbc87c0f761266a45e781e06b", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"716155923028609f598900c873d4d5de121ce0a7", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"152b02cde03a3791ee7948d5f6ce31c3e8e3be39", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
