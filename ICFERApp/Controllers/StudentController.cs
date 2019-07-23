@@ -10,10 +10,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NToastNotify;
 using ReflectionIT.Mvc.Paging;
+using X.PagedList;
 
 namespace ICFERApp.Controllers
 {
-    public class StudentController : BaseController<Student>
+    public class StudentController : Controller
     {
         private readonly IStudentRepository _studentRepository;
         private readonly IToastNotification _toastNotification;
@@ -25,16 +26,25 @@ namespace ICFERApp.Controllers
         }
 
         // GET
-        public  IActionResult Index(string search = null)
+        public  IActionResult Index(string search ,int? pageNumber)
         {
+            
+            var nextPage = pageNumber ?? 1;
+            
+            
             if (!string.IsNullOrEmpty(search))
             {
                 var foundStudents = _studentRepository.SearchStudents(search);
-                return View(foundStudents);
+                var onePageOfFoundStudents = foundStudents.ToPagedList(nextPage, 3);
+                ViewBag.onePageOfStudents = onePageOfFoundStudents;
+                return View();
+                
             }
             var students =  _studentRepository.GetAllStudents();
+            var onePageOfStudents = students.ToPagedList(nextPage, 3);
+            ViewBag.onePageOfStudents = onePageOfStudents;
                         
-            return View(students);
+            return View();
         }
 
         [HttpGet]

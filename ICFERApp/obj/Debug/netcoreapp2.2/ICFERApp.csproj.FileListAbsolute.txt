@@ -34,4 +34,3 @@
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Views/Student/Index.g.cshtml.cs
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Views/Student/New.g.cshtml.cs
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Views/Student/Details.g.cshtml.cs
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Pagination.g.cshtml.cs
