@@ -25,16 +25,19 @@ namespace ICFERApp.Controllers
         }
 
         // GET
-        public  IActionResult Index(string search = null)
+        public  IActionResult Index(string search = null, int page = 1)
+        
         {
-            if (!string.IsNullOrEmpty(search))
-            {
-                var foundStudents = _studentRepository.SearchStudents(search);
-                return View(foundStudents);
-            }
+//            if (!string.IsNullOrEmpty(search))
+//            {
+//                var foundStudents = _studentRepository.SearchStudents(search);
+//                return View(foundStudents);
+//            }
             var students =  _studentRepository.GetAllStudents();
+            
+            var paginatedResult = PaginatedResult(students,page,4);
                         
-            return View(students);
+            return View(paginatedResult);
         }
 
         [HttpGet]
