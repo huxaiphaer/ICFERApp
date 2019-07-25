@@ -31,7 +31,8 @@ namespace ICFERApp.Controllers
                 HttpContext, RouteData, "ReportDetails", singleStudent);
             
            
-            
+            var barcode = new Barcode(singleStudent.StudentRegNo, NetBarcode.Type.Code128, true);
+            ViewBag.BarCode = barcode.GetBase64Image();
             HttpContext.JsReportFeature()
                 .Recipe(Recipe.ChromePdf)
                 .Configure((r) => r.Template.Chrome = new Chrome{ HeaderTemplate = header });

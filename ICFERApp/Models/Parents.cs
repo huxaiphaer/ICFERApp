@@ -14,10 +14,10 @@ namespace ICFERApp.Models
         [Display(Name="Religion Of Deceased Mother")]
         public string ReligionOfDeceasedMother { get; set; }
         [Display(Name="Date Of Demise Father")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        [DisplayFormat( DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime DateOfDemiseOfFather { get; set; }
         
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        [DisplayFormat( DataFormatString = "{0:MM/dd/yyyy}")]
         
         public DateTime DateOfDemiseOfMother { get; set; }
         [Display(Name="Names of Mother")]

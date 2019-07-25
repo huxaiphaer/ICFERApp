@@ -18,6 +18,12 @@ html {
   }
 }
 
+body{
+  
+  height: 60%;
+  min-height: 60%;
+}
+
 .border-top {
   border-top: 1px solid #ffffff;
 }

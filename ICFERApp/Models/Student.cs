@@ -43,7 +43,7 @@ namespace ICFERApp.Models
         [Display(Name="City")]
         public string City { get; set; }
         [Display(Name="Date Of Birth")]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime DateOfBirth { get; set; }
         
         public int Age { get; set; }

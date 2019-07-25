@@ -12,6 +12,7 @@ using NetBarcode;
 using NToastNotify;
 using ReflectionIT.Mvc.Paging;
 using X.PagedList;
+using Type = System.Type;
 
 namespace ICFERApp.Controllers
 {
@@ -173,8 +174,9 @@ namespace ICFERApp.Controllers
         {
             var singleStudent = _studentRepository.GetSingleStudent(id);
             
-
-//            ViewBag.BarcodeImage = value;
+            var barcode = new Barcode(singleStudent.StudentRegNo, NetBarcode.Type.Code128, true);
+            ViewBag.BarCode = barcode.GetBase64Image();
+            
             return View(singleStudent);
         }
 
