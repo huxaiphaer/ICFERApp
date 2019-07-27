@@ -7,6 +7,7 @@ using ICFERApp.Models;
 using ICFERApp.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NetBarcode;
 using NToastNotify;
@@ -20,11 +21,15 @@ namespace ICFERApp.Controllers
     {
         private readonly IStudentRepository _studentRepository;
         private readonly IToastNotification _toastNotification;
-
-        public StudentController(IStudentRepository studentRepository,IToastNotification toastNotification)
+        private readonly UserManager<ApplicationUser> _userManager;
+        public StudentController(IStudentRepository studentRepository,
+            IToastNotification toastNotification,
+            UserManager<ApplicationUser> userManager 
+            )
         {
             _studentRepository = studentRepository;
             _toastNotification = toastNotification;
+            _userManager = userManager;
         }
 
         // GET
@@ -77,6 +82,11 @@ namespace ICFERApp.Controllers
                 if (IsEditMode.Equals("false"))
                 {
 
+                    var userId = _userManager.GetUserId(this.HttpContext.User);
+                    var userName = _userManager.GetUserName(this.HttpContext.User);
+                    
+                    student.UserId = userId;
+                    student.UserName = userName;
                     _studentRepository.Create(student);
                      UploadFile(file, student.Id);
                     _toastNotification.AddSuccessToastMessage("Student has been created successfully.");
@@ -85,15 +95,23 @@ namespace ICFERApp.Controllers
 
                 else
                 {
+                    
+                    var userId = _userManager.GetUserId(this.HttpContext.User);
+                    var userName = _userManager.GetUserName(this.HttpContext.User);
+                    
+                    student.UserId = userId;
+                    student.UserName = userName;
 
                     if (file == null)
                     {
+                       
                        
                         _studentRepository.EditWithoutFile(student);
                         _toastNotification.AddSuccessToastMessage("Student has been edited successfully.");
                     }
                     else
                     {
+                       
                         _studentRepository.Edit(student);
                         UploadFile(file, student.Id);
                         _toastNotification.AddSuccessToastMessage("Student has been edited successfully.");

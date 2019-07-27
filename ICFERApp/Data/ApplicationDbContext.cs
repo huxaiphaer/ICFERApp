@@ -15,20 +15,19 @@ namespace ICFERApp.Data
         }
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<Education> Education { get; set; }
-        public DbSet<Guardian> Guardian { get; set; }
-        public DbSet<Parents> Parents { get; set; }
-        public DbSet<Siblings> Siblings { get; set; }
-      
+    
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
+            builder.Entity<ApplicationUser>()
+                .HasMany(s => s.Students)
+                .WithOne(u => u.User);
+
+
             builder.Entity<Student>()
                 .HasOne(e => e.Education)
-                .WithOne(s => s.Student)
-                
-                ;
+                .WithOne(s => s.Student);
 
 
             builder.Entity<Student>()
@@ -42,7 +41,6 @@ namespace ICFERApp.Data
             builder.Entity<Student>()
                 .HasOne(s => s.Siblings)
                 .WithOne(s => s.Student);
-            
 
             builder.Entity<Siblings>()
                 .Property(p => p.Id)
@@ -71,7 +69,6 @@ namespace ICFERApp.Data
 
             builder.Entity<Parents>()
                 .HasKey(x => new { x.Id, x.StudentId});
-            
             
 
         }

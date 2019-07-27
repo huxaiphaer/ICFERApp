@@ -32,7 +32,7 @@
                 <div class="pv-lg"><img  height="200" width="180" src="/images/@Model.ImageUrl" alt="Contact"></div>
 
             </td>
-            <td> <h5>Registration Number :</h5>  <i> <h5 style="color: rgb(21, 121, 31)">@Model.StudentRegNo</h5> </i></td>
+            <td> <h5>Registration Number :</h5>  <b> <h5 style="color: rgb(21, 121, 31)">@Model.StudentRegNo</h5> </b></td>
         </tr>
         <tr>
             <td>
@@ -82,7 +82,7 @@
             </tr>
 
             <tr>
-                <td> <b>Date of Birth :</b> @Model.DateOfBirth</td>
+                <td> <b>Date of Birth :</b> @Model.DateOfBirth.ToShortDateString()</td>
                 <td> <b>Medical Condition :</b> @Model.MedicalCondition</td>
             </tr>
             <tr>
@@ -124,8 +124,8 @@
                 <td> <b>Religion Of Deceased Mother :</b> @Model.Parents.ReligionOfDeceasedMother</td>
             </tr>
             <tr>
-                <td> <b>Date Of Demise Father :</b> @Model.Parents.DateOfDemiseOfFather</td>
-                <td> <b>Date Of Demise Mother :</b> @Model.Parents.DateOfDemiseOfMother</td>
+                <td> <b>Date Of Demise Father :</b> @Model.Parents.DateOfDemiseOfFather.ToShortDateString()</td>
+                <td> <b>Date Of Demise Mother :</b> @Model.Parents.DateOfDemiseOfMother.ToShortDateString()</td>
             </tr>
             <tr>
                 <td> <b> Names of Mother :</b> @Model.Parents.NamesOfMother</td>

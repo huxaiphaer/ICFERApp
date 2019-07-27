@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ICFERApp.Data;
+using ICFERApp.Models;
 using ICFERApp.Repository;
 using jsreport.AspNetCore;
 using jsreport.Binary.OSX;
@@ -40,27 +41,28 @@ namespace ICFERApp
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddDefaultUI(UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            
 
             services.AddTransient<IStudentRepository, StudentRepository>();
             services.AddMvc().AddNToastNotifyToastr();
             
+       
             services.AddJsReport(new LocalReporting()
                 .UseBinary(RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
                     ? JsReportBinary.GetBinary()
                     : jsreport.Binary.OSX.JsReportBinary.GetBinary())
                 .AsUtility()
                 .Create());
-            
-         
-            
-
+             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ICFERApp.Data.Migrations
+namespace ICFERApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190715200711_add more tables 3")]
-    partial class addmoretables3
+    [Migration("20190727194604_initialize db")]
+    partial class initializedb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,6 +24,8 @@ namespace ICFERApp.Data.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<long>("StudentId");
+
                     b.Property<string>("AddressOfSchool");
 
                     b.Property<string>("EducationLevel");
@@ -32,11 +34,11 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("School");
 
-                    b.Property<long?>("StudentId");
-
                     b.Property<string>("Telephone");
 
-                    b.HasKey("Id");
+                    b.HasKey("Id", "StudentId");
+
+                    b.HasAlternateKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();
@@ -48,6 +50,8 @@ namespace ICFERApp.Data.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<long>("StudentId");
 
                     b.Property<string>("Comments");
 
@@ -69,11 +73,11 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("RelationshipToOrphan");
 
-                    b.Property<long?>("StudentId");
-
                     b.Property<string>("WorkAddress");
 
-                    b.HasKey("Id");
+                    b.HasKey("Id", "StudentId");
+
+                    b.HasAlternateKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();
@@ -85,6 +89,8 @@ namespace ICFERApp.Data.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<long>("StudentId");
 
                     b.Property<DateTime>("DateOfDemiseOfFather");
 
@@ -106,9 +112,9 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("ReligionOfMother");
 
-                    b.Property<long?>("StudentId");
+                    b.HasKey("Id", "StudentId");
 
-                    b.HasKey("Id");
+                    b.HasAlternateKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();
@@ -121,13 +127,15 @@ namespace ICFERApp.Data.Migrations
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<long>("StudentId");
+
                     b.Property<int>("NumberOfBrothers");
 
                     b.Property<int>("NumberOfSisters");
 
-                    b.Property<long?>("StudentId");
+                    b.HasKey("Id", "StudentId");
 
-                    b.HasKey("Id");
+                    b.HasAlternateKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();
@@ -156,6 +164,8 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("HomeAddress");
 
+                    b.Property<string>("ImageUrl");
+
                     b.Property<string>("LastName");
 
                     b.Property<string>("MedicalCondition");
@@ -166,7 +176,13 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("Religion");
 
+                    b.Property<string>("StudentRegNo");
+
+                    b.Property<string>("UserId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Students");
                 });
@@ -223,6 +239,9 @@ namespace ICFERApp.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -261,6 +280,8 @@ namespace ICFERApp.Data.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -332,32 +353,50 @@ namespace ICFERApp.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("ICFERApp.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
+                });
+
             modelBuilder.Entity("ICFERApp.Models.Education", b =>
                 {
                     b.HasOne("ICFERApp.Models.Student", "Student")
                         .WithOne("Education")
-                        .HasForeignKey("ICFERApp.Models.Education", "StudentId");
+                        .HasForeignKey("ICFERApp.Models.Education", "StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("ICFERApp.Models.Guardian", b =>
                 {
                     b.HasOne("ICFERApp.Models.Student", "Student")
                         .WithOne("Guardian")
-                        .HasForeignKey("ICFERApp.Models.Guardian", "StudentId");
+                        .HasForeignKey("ICFERApp.Models.Guardian", "StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("ICFERApp.Models.Parents", b =>
                 {
                     b.HasOne("ICFERApp.Models.Student", "Student")
                         .WithOne("Parents")
-                        .HasForeignKey("ICFERApp.Models.Parents", "StudentId");
+                        .HasForeignKey("ICFERApp.Models.Parents", "StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("ICFERApp.Models.Siblings", b =>
                 {
                     b.HasOne("ICFERApp.Models.Student", "Student")
                         .WithOne("Siblings")
-                        .HasForeignKey("ICFERApp.Models.Siblings", "StudentId");
+                        .HasForeignKey("ICFERApp.Models.Siblings", "StudentId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ICFERApp.Models.Student", b =>
+                {
+                    b.HasOne("ICFERApp.Models.ApplicationUser", "User")
+                        .WithMany("Students")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

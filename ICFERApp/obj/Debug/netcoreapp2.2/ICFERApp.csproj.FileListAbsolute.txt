@@ -1,9 +1,3 @@
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.csprojAssemblyReference.cache
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.csproj.CoreCompileInputs.cache
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.RazorAssemblyInfo.cache
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.RazorAssemblyInfo.cs
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.AssemblyInfoInputs.cache
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.AssemblyInfo.cs
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/bin/Debug/netcoreapp2.2/app.db
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/bin/Debug/netcoreapp2.2/ICFERApp.deps.json
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/bin/Debug/netcoreapp2.2/ICFERApp.runtimeconfig.json
@@ -12,6 +6,12 @@
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/bin/Debug/netcoreapp2.2/ICFERApp.pdb
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/bin/Debug/netcoreapp2.2/ICFERApp.Views.dll
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/bin/Debug/netcoreapp2.2/ICFERApp.Views.pdb
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.csprojAssemblyReference.cache
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.csproj.CoreCompileInputs.cache
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.RazorAssemblyInfo.cache
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.RazorAssemblyInfo.cs
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.AssemblyInfoInputs.cache
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.AssemblyInfo.cs
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.TagHelpers.input.cache
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.TagHelpers.output.cache
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.RazorCoreGenerate.cache

@@ -151,7 +151,7 @@
             <div class="col">
                 <label asp-for="Education.EducationLevel"></label>
                 <select  asp-for="Education.EducationLevel" class="form-control"> 
-                    <option value="Nursery<">Nursery</option>
+                    <option value="Nursery">Nursery</option>
                     <option value="Primary">Primary</option>
                     <option value="Secondary">Secondary</option>
                 </select>
@@ -217,7 +217,11 @@
         <div class="form-row">
             <div class="col">
                 <label asp-for="Parents.ReligionOfMother"></label>
-                <input asp-for="Parents.ReligionOfMother" class="form-control"/>
+                <select asp-for="Parents.ReligionOfMother" class="form-control"> 
+                    <option value="Muslim">Muslim</option>
+                    <option value="Christian">Christian</option>
+                    <option value="Other">Other</option>
+                </select>
                 <span asp-validation-for="Parents.ReligionOfMother" class="text-danger"></span>
             </div>
             <div class="col">

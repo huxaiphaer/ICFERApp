@@ -40,7 +40,7 @@
                 <td class="text-center" style="color: rgba(113, 3, 138, 0.99)"><h5>Student's Profile</h5></td>
             </tr>
             <tr>
-                <td> <b>Full Names :</b> @Model.FirstName @Model.MiddleName @Model.LastName</td>
+                <td> <b>Full Names :</b> @Model.FirstName @Model.MiddleName @Model.LastName  </td> 
                 <td> <b>Country :</b> @Model.Nationality</td>
 
             </tr>
@@ -66,7 +66,7 @@
             </tr>
 
             <tr>
-                <td> <b>Date of Birth :</b> @Model.DateOfBirth</td>
+                <td> <b>Date of Birth :</b> @Model.DateOfBirth.ToShortDateString()</td>
                 <td> <b>Medical Condition :</b> @Model.MedicalCondition</td>
             </tr>
             <tr>
@@ -108,8 +108,8 @@
                 <td> <b>Religion Of Deceased Mother :</b> @Model.Parents.ReligionOfDeceasedMother</td>
             </tr>
             <tr>
-                <td> <b>Date Of Demise Father :</b> @Model.Parents.DateOfDemiseOfFather</td>
-                <td> <b>Date Of Demise Mother :</b> @Model.Parents.DateOfDemiseOfMother</td>
+                <td> <b>Date Of Demise Father :</b> @Model.Parents.DateOfDemiseOfFather.ToShortDateString()</td>
+                <td> <b>Date Of Demise Mother :</b> @Model.Parents.DateOfDemiseOfMother.ToShortDateString()</td>
             </tr>
             <tr>
                 <td> <b> Names of Mother :</b> @Model.Parents.NamesOfMother</td>

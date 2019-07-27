@@ -49,6 +49,12 @@ namespace ICFERApp.Models
         public int Age { get; set; }
 
         public string ImageUrl { get; set; }
+        
+        public ApplicationUser User { get; set; }
+        public string UserId { get; set; }
+        public string UserName { get; set; }
+
+
         public virtual Parents Parents { get; set; }
         public virtual Education Education { get; set; }
         public virtual Guardian Guardian { get; set; }

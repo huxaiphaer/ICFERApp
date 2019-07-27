@@ -3,16 +3,14 @@ using System;
 using ICFERApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace ICFERApp.Data.Migrations
+namespace ICFERApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20190716001447_add more tables 7")]
-    partial class addmoretables7
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,6 +36,8 @@ namespace ICFERApp.Data.Migrations
 
                     b.HasKey("Id", "StudentId");
 
+                    b.HasAlternateKey("Id");
+
                     b.HasIndex("StudentId")
                         .IsUnique();
 
@@ -48,6 +48,8 @@ namespace ICFERApp.Data.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<long>("StudentId");
 
                     b.Property<string>("Comments");
 
@@ -69,11 +71,11 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("RelationshipToOrphan");
 
-                    b.Property<long>("StudentId");
-
                     b.Property<string>("WorkAddress");
 
-                    b.HasKey("Id");
+                    b.HasKey("Id", "StudentId");
+
+                    b.HasAlternateKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();
@@ -85,6 +87,8 @@ namespace ICFERApp.Data.Migrations
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<long>("StudentId");
 
                     b.Property<DateTime>("DateOfDemiseOfFather");
 
@@ -106,9 +110,9 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("ReligionOfMother");
 
-                    b.Property<long>("StudentId");
+                    b.HasKey("Id", "StudentId");
 
-                    b.HasKey("Id");
+                    b.HasAlternateKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();
@@ -128,6 +132,8 @@ namespace ICFERApp.Data.Migrations
                     b.Property<int>("NumberOfSisters");
 
                     b.HasKey("Id", "StudentId");
+
+                    b.HasAlternateKey("Id");
 
                     b.HasIndex("StudentId")
                         .IsUnique();
@@ -156,6 +162,8 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("HomeAddress");
 
+                    b.Property<string>("ImageUrl");
+
                     b.Property<string>("LastName");
 
                     b.Property<string>("MedicalCondition");
@@ -166,7 +174,15 @@ namespace ICFERApp.Data.Migrations
 
                     b.Property<string>("Religion");
 
+                    b.Property<string>("StudentRegNo");
+
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("UserName");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Students");
                 });
@@ -223,6 +239,9 @@ namespace ICFERApp.Data.Migrations
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired();
+
                     b.Property<string>("Email")
                         .HasMaxLength(256);
 
@@ -261,6 +280,8 @@ namespace ICFERApp.Data.Migrations
                         .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("IdentityUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -284,11 +305,9 @@ namespace ICFERApp.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("ProviderKey")
-                        .HasMaxLength(128);
+                    b.Property<string>("ProviderKey");
 
                     b.Property<string>("ProviderDisplayName");
 
@@ -319,17 +338,22 @@ namespace ICFERApp.Data.Migrations
                 {
                     b.Property<string>("UserId");
 
-                    b.Property<string>("LoginProvider")
-                        .HasMaxLength(128);
+                    b.Property<string>("LoginProvider");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(128);
+                    b.Property<string>("Name");
 
                     b.Property<string>("Value");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("ICFERApp.Models.ApplicationUser", b =>
+                {
+                    b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
+
+                    b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
             modelBuilder.Entity("ICFERApp.Models.Education", b =>
@@ -362,6 +386,13 @@ namespace ICFERApp.Data.Migrations
                         .WithOne("Siblings")
                         .HasForeignKey("ICFERApp.Models.Siblings", "StudentId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ICFERApp.Models.Student", b =>
+                {
+                    b.HasOne("ICFERApp.Models.ApplicationUser", "User")
+                        .WithMany("Students")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
