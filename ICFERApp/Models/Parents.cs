@@ -10,27 +10,37 @@ namespace ICFERApp.Models
         [Key]
         public long Id { get; set; }
         [Display(Name="Religion Of Deceased Father")]
+        [Required]
         public string ReligionOfDeceasedFather { get; set; }
         [Display(Name="Religion Of Deceased Mother")]
+        [Required]
         public string ReligionOfDeceasedMother { get; set; }
         [Display(Name="Date Of Demise Father")]
+        [Required]
         [DisplayFormat( DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime DateOfDemiseOfFather { get; set; }
         
         [DisplayFormat( DataFormatString = "{0:MM/dd/yyyy}")]
+        [Required]
         
         public DateTime DateOfDemiseOfMother { get; set; }
         [Display(Name="Names of Mother")]
+        [Required]
         public string NamesOfMother { get; set; }
         [Display(Name="Names of Father")]
+        [Required]
         public string NamesOfFather { get; set; }
         [Display(Name="Religion of Mother")]
+        [Required]
         public string ReligionOfMother { get; set; }
         [Display(Name="Marital Status of Mother")]
+        [Required]
         public string MaritalStatusOfMother { get; set; }
         [Display(Name="Occupation of Mother")]
+        [Required]
         public string OccupationOfMother { get; set; }
         [Display(Name="Monthly Income")]
+        [Required]
         public double MonthlyIncome { get; set; }
         public virtual Student Student { get; set; }
       

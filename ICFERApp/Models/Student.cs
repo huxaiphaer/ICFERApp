@@ -21,31 +21,44 @@ namespace ICFERApp.Models
         }
 
         [Display(Name="First Name")]
+        [Required]
         public string FirstName { get; set; }
         [Display(Name="Middle Name")]
+        [Required]
         public string MiddleName { get; set; }
         [Display(Name="Last Name")]
+        [Required]
         public string LastName { get; set; }
         [Display(Name="Nationality")]
+        [Required]
         public string Nationality { get; set; }
         [Display(Name="Gender")]
+        [Required]
         public string Gender { get; set; }
         [Display(Name="Religion")]
+        [Required]
         public string Religion { get; set; }
         [Display(Name="Medical Condition")]
+        [Required]
         public string MedicalCondition { get; set; }
         [Display(Name="Deceased")]
+        [Required]
         public string Deceased { get; set; }
         [Display(Name="Home Address")]
+        [Required]
         public string HomeAddress { get; set; }
         [Display(Name="Country Of Residence")]
+        [Required]
         public string CountryOfResidence { get; set; }
         [Display(Name="City")]
+        [Required]
         public string City { get; set; }
         [Display(Name="Date Of Birth")]
+        [Required]
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime DateOfBirth { get; set; }
         
+        [Required]
         public int Age { get; set; }
 
         public string ImageUrl { get; set; }

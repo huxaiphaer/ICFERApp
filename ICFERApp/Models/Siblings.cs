@@ -10,8 +10,10 @@ namespace ICFERApp.Models
         [Key]
         public long Id { get; set; }
         [Display(Name="Number of Brothers")]
+        [Required]
         public int NumberOfBrothers { get; set; }
         [Display(Name="Number of Sisters")]
+        [Required]
         public int NumberOfSisters { get; set; }
         
         public Student Student { get; set; }
