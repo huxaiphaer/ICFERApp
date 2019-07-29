@@ -13,8 +13,21 @@
         <e p="appsettings.json" t="Include" />
         <e p="Areas" t="Include">
           <e p="Identity" t="Include">
+            <e p="Data" t="Include">
+              <e p="ICFERAppIdentityDbContext.cs" t="Include" />
+            </e>
+            <e p="IdentityHostingStartup.cs" t="Include" />
             <e p="Pages" t="Include">
+              <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+              <e p="_ViewImports.cshtml" t="Include" />
               <e p="_ViewStart.cshtml" t="Include" />
+              <e p="Account" t="Include">
+                <e p="_ViewImports.cshtml" t="Include" />
+                <e p="Login.cshtml" t="Include" />
+                <e p="Login.cshtml.cs" t="Include" />
+                <e p="Logout.cshtml" t="Include" />
+                <e p="Logout.cshtml.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>
@@ -26,7 +39,6 @@
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
-          <e p="Migrations" t="Include" />
         </e>
         <e p="ICFERApp.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
@@ -61,6 +73,7 @@
           <e p="IStudentRepository.cs" t="Include" />
           <e p="StudentRepository.cs" t="Include" />
         </e>
+        <e p="ScaffoldingReadme.txt" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
