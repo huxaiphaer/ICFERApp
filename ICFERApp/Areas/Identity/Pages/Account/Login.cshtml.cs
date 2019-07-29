@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using NToastNotify;
 
 namespace ICFERApp.Areas.Identity.Pages.Account
 {
@@ -18,11 +19,18 @@ namespace ICFERApp.Areas.Identity.Pages.Account
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
+        private readonly IToastNotification _toastNotification;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<ApplicationUser> signInManager,
+            IToastNotification toastNotification,
+            UserManager<ApplicationUser> userManager ,
+            ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _toastNotification = toastNotification;
+            _userManager = userManager;
         }
 
         [BindProperty]
@@ -78,6 +86,11 @@ namespace ICFERApp.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+
+                    var GetUsername = _signInManager.UserManager.GetUserName(this.HttpContext.User);
+                    
+                    _toastNotification.AddSuccessToastMessage("You have successfully logged in " +GetUsername);
+                    
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -87,11 +100,13 @@ namespace ICFERApp.Areas.Identity.Pages.Account
                 if (result.IsLockedOut)
                 {
                     _logger.LogWarning("User account locked out.");
+                    _toastNotification.AddErrorToastMessage("Your account has been locked");
                     return RedirectToPage("./Lockout");
                 }
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    _toastNotification.AddErrorToastMessage("Invalid password please try again.");
                     return Page();
                 }
             }
