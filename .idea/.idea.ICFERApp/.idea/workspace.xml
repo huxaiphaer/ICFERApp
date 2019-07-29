@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e66a7b8-c40f-4926-88f7-133f4cc03432" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ICFERApp/Areas/Identity/Pages/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ICFERApp/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="9e66a7b8-c40f-4926-88f7-133f4cc03432" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +10,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ICFERApp/Views/Shared/_LoginPartial.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
+              <folding>
+                <marker date="1564391823314" expanded="true" signature="140:824" ph="&lt;ul.../&gt;" />
+                <marker date="1564391823314" expanded="true" signature="164:818" ph="@..." />
+                <marker date="1564391823314" expanded="true" signature="200:674" ph="{...}" />
+                <marker date="1564391823314" expanded="true" signature="207:376" ph="&lt;li.../&gt;" />
+                <marker date="1564391823314" expanded="true" signature="381:672" ph="&lt;li.../&gt;" />
+                <marker date="1564391823314" expanded="true" signature="411:662" ph="&lt;form.../&gt;" />
+                <marker date="1564391823314" expanded="true" signature="679:818" ph="{...}" />
+                <marker date="1564391823314" expanded="true" signature="691:816" ph="&lt;li.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ICFERApp/Controllers/HomeController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding>
+                <marker date="1564426894135" expanded="false" signature="6:177" ph="..." />
+                <marker date="1564426894135" expanded="true" signature="209:703" ph="{...}" />
+                <marker date="1564426894135" expanded="true" signature="256:701" ph="{...}" />
+                <marker date="1564426894135" expanded="true" signature="299:346" ph="{...}" />
+                <marker date="1564426894135" expanded="true" signature="386:433" ph="{...}" />
+                <marker date="1564426894135" expanded="true" signature="564:695" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ICFERApp/Areas/Identity/Pages/Account/Login.cshtml">
           <provider selected="true" editor-type-id="text-editor">
@@ -137,8 +171,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ICFERApp/Areas/Identity/Pages/Account/Login.cshtml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-721">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="964">
+              <caret line="77" column="37" lean-forward="true" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
               <folding>
                 <marker date="1564409042219" expanded="false" signature="6:397" ph="..." />
                 <marker date="1564409042219" expanded="true" signature="446:3463" ph="{...}" />
@@ -154,6 +188,39 @@
                 <marker date="1564409042219" expanded="true" signature="2798:2957" ph="{...}" />
                 <marker date="1564409042219" expanded="true" signature="2997:3157" ph="{...}" />
                 <marker date="1564409042219" expanded="true" signature="3178:3335" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ICFERApp/Views/Shared/_Layout.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <marker date="1564086836188" expanded="true" signature="16:4401" ph="&lt;html.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="23:1295" ph="&lt;head.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="190:729" ph="&lt;environment.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="434:592" ph="&lt;!--...--&gt;" />
+                <marker date="1564086836188" expanded="true" signature="734:1235" ph="&lt;environment.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="1296:4393" ph="&lt;body.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="1307:2619" ph="&lt;header.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="1324:2605" ph="&lt;nav.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="1447:2590" ph="&lt;div.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="1618:1921" ph="&lt;button.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="1938:2571" ph="&lt;div.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="2087:2548" ph="&lt;ul.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="2147:2321" ph="&lt;li.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="2346:2522" ph="&lt;li.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="2624:2846" ph="&lt;div.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="2705:2835" ph="&lt;main.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="2852:3065" ph="&lt;footer.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="2906:3051" ph="&lt;div.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="3071:3419" ph="&lt;environment.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="3424:4269" ph="&lt;environment.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="3468:3803" ph="&lt;script.../&gt;" />
+                <marker date="1564086836188" expanded="true" signature="3812:4241" ph="&lt;script.../&gt;" />
               </folding>
             </state>
           </provider>
@@ -253,6 +320,7 @@
         <option value="$PROJECT_DIR$/ICFERApp/Startup.cs" />
         <option value="$PROJECT_DIR$/ICFERApp/Areas/Identity/Pages/Account/Login.cshtml.cs" />
         <option value="$PROJECT_DIR$/ICFERApp/Areas/Identity/Pages/Account/Login.cshtml" />
+        <option value="$PROJECT_DIR$/ICFERApp/Controllers/HomeController.cs" />
       </list>
     </option>
   </component>
@@ -375,6 +443,13 @@
               <item name="ICFERApp" type="24d0babc:SolutionExplorerModelNode" />
               <item name="ICFERApp" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Shared" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="ICFERApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ICFERApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Student" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
@@ -445,7 +520,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91286000" />
+    <option name="totallyTimeSpent" value="91543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,7 +553,7 @@
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Unit Tests" order="11" weight="0.32891566" />
       <window_info anchor="bottom" id="REST Client" order="12" weight="0.51686746" />
-      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.036144577" />
+      <window_info anchor="bottom" id="Terminal" order="13" visible="true" weight="0.40120482" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="15" weight="0.4361446" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -603,21 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ICFERApp/Controllers/HomeController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <marker date="1562615917393" expanded="false" signature="6:177" ph="..." />
-            <marker date="1562615917393" expanded="true" signature="209:703" ph="{...}" />
-            <marker date="1562615917393" expanded="true" signature="256:701" ph="{...}" />
-            <marker date="1562615917393" expanded="true" signature="299:346" ph="{...}" />
-            <marker date="1562615917393" expanded="true" signature="386:433" ph="{...}" />
-            <marker date="1562615917393" expanded="true" signature="564:695" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AEDA1EA-7722-4CA6-A7CA-C000AF27DEC0/ce/c78ec6c8/ExceptionDispatchInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -689,37 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ICFERApp/Views/Shared/_Layout.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-          <folding>
-            <marker date="1564086836188" expanded="true" signature="16:4401" ph="&lt;html.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="23:1295" ph="&lt;head.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="190:729" ph="&lt;environment.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="434:592" ph="&lt;!--...--&gt;" />
-            <marker date="1564086836188" expanded="true" signature="734:1235" ph="&lt;environment.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="1296:4393" ph="&lt;body.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="1307:2619" ph="&lt;header.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="1324:2605" ph="&lt;nav.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="1447:2590" ph="&lt;div.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="1618:1921" ph="&lt;button.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="1938:2571" ph="&lt;div.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="2087:2548" ph="&lt;ul.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="2147:2321" ph="&lt;li.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="2346:2522" ph="&lt;li.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="2624:2846" ph="&lt;div.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="2705:2835" ph="&lt;main.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="2852:3065" ph="&lt;footer.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="2906:3051" ph="&lt;div.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="3071:3419" ph="&lt;environment.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="3424:4269" ph="&lt;environment.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="3468:3803" ph="&lt;script.../&gt;" />
-            <marker date="1564086836188" expanded="true" signature="3812:4241" ph="&lt;script.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ICFERApp/wwwroot/css/site.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -754,13 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ICFERApp/Views/Shared/_LoginPartial.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1175,10 +1197,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ICFERApp/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <marker date="1564086836188" expanded="true" signature="16:4401" ph="&lt;html.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="23:1295" ph="&lt;head.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="190:729" ph="&lt;environment.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="434:592" ph="&lt;!--...--&gt;" />
+            <marker date="1564086836188" expanded="true" signature="734:1235" ph="&lt;environment.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="1296:4393" ph="&lt;body.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="1307:2619" ph="&lt;header.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="1324:2605" ph="&lt;nav.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="1447:2590" ph="&lt;div.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="1618:1921" ph="&lt;button.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="1938:2571" ph="&lt;div.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="2087:2548" ph="&lt;ul.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="2147:2321" ph="&lt;li.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="2346:2522" ph="&lt;li.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="2624:2846" ph="&lt;div.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="2705:2835" ph="&lt;main.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="2852:3065" ph="&lt;footer.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="2906:3051" ph="&lt;div.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="3071:3419" ph="&lt;environment.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="3424:4269" ph="&lt;environment.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="3468:3803" ph="&lt;script.../&gt;" />
+            <marker date="1564086836188" expanded="true" signature="3812:4241" ph="&lt;script.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ICFERApp/Views/Shared/_LoginPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="127" selection-start-line="11" selection-start-column="127" selection-end-line="11" selection-end-column="127" />
+          <folding>
+            <marker date="1564391823314" expanded="true" signature="140:824" ph="&lt;ul.../&gt;" />
+            <marker date="1564391823314" expanded="true" signature="164:818" ph="@..." />
+            <marker date="1564391823314" expanded="true" signature="200:674" ph="{...}" />
+            <marker date="1564391823314" expanded="true" signature="207:376" ph="&lt;li.../&gt;" />
+            <marker date="1564391823314" expanded="true" signature="381:672" ph="&lt;li.../&gt;" />
+            <marker date="1564391823314" expanded="true" signature="411:662" ph="&lt;form.../&gt;" />
+            <marker date="1564391823314" expanded="true" signature="679:818" ph="{...}" />
+            <marker date="1564391823314" expanded="true" signature="691:816" ph="&lt;li.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ICFERApp/Controllers/HomeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <marker date="1564426894135" expanded="false" signature="6:177" ph="..." />
+            <marker date="1564426894135" expanded="true" signature="209:703" ph="{...}" />
+            <marker date="1564426894135" expanded="true" signature="256:701" ph="{...}" />
+            <marker date="1564426894135" expanded="true" signature="299:346" ph="{...}" />
+            <marker date="1564426894135" expanded="true" signature="386:433" ph="{...}" />
+            <marker date="1564426894135" expanded="true" signature="564:695" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ICFERApp/Areas/Identity/Pages/Account/Login.cshtml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-721">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="964">
+          <caret line="77" column="37" lean-forward="true" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
           <folding>
             <marker date="1564409042219" expanded="false" signature="6:397" ph="..." />
             <marker date="1564409042219" expanded="true" signature="446:3463" ph="{...}" />
