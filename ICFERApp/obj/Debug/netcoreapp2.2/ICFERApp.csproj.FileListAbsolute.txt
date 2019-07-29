@@ -15,7 +15,6 @@
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.TagHelpers.input.cache
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.TagHelpers.output.cache
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.RazorCoreGenerate.cache
-/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ViewStart.g.cshtml.cs
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.g.cshtml.cs
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Views/Reports/ReportDetails.g.cshtml.cs
@@ -35,3 +34,8 @@
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.dll
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.pdb
 /Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/ICFERApp.csproj.CopyComplete
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/Account/Login.g.cshtml.cs
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/Account/_ViewImports.g.cshtml.cs
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.g.cshtml.cs
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ViewImports.g.cshtml.cs
+/Users/idrislutaaya/RiderProjects/ICFERApp/ICFERApp/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ViewStart.g.cshtml.cs
