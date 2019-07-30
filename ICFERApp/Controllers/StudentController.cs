@@ -198,6 +198,13 @@ namespace ICFERApp.Controllers
             return View(singleStudent);
         }
 
+        [Authorize]
+        public IActionResult BiometricSearch()
+        {
+
+            return View();
+        }
+
 
         
     }
