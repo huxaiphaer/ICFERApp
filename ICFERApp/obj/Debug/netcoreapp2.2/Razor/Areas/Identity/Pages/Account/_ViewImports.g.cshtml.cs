@@ -29,7 +29,7 @@ using ICFERApp.Areas.Identity.Pages.Account;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"96488676fed3c668cb9d43ecf73e60811f2c727d", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"31516fe0d80f1dfd356c8b4c225931a1f08a62f6", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"59e6240ac89b9512f1bd08d9ba21f2203c9e63e7", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account__ViewImports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
